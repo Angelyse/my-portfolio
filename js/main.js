@@ -1,23 +1,3 @@
-
-$(window).on("load", function() {
-    (setTimeout(function() {
-        $(".preloader").addClass("loaded")
-    }, 1e3),
-    $(".portfolio-items").length) && ($(".portfolio-items").isotope(),
-    $(".portfolio-filter ul li").on("click", function() {
-        $(".portfolio-filter ul li").removeClass("sel-item"),
-        $(this).addClass("sel-item");
-        var t = $(this).attr("data-filter");
-        $(".portfolio-items").isotope({
-            filter: t,
-            animationOptions: {
-                duration: 750,
-                easing: "linear",
-                queue: !1
-            }
-        })
-    }))
-}),
 $(function() {
     "use strict";
     var t = $(window);
